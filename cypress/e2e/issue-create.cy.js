@@ -146,7 +146,7 @@ describe("Issue create", () => {
       });
   });
 
-  it.only("Should create a random Data Plugin issue", () => {
+  it("Should create a random Data Plugin issue", () => {
     const randomTitle = faker.random.word();
     const randomDescription = faker.lorem.sentence();
     cy.get('[data-testid="modal:issue-create"]').within(() => {
