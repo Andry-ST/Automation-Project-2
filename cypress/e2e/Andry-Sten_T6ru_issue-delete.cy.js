@@ -1,3 +1,6 @@
+const getIssueDetailsModal = () =>
+  cy.get('[data-testid="modal:issue-details"]');
+
 describe("Issue deleting", () => {
   beforeEach(() => {
     cy.visit("/");
@@ -35,7 +38,4 @@ describe("Issue deleting", () => {
     cy.reload();
     cy.contains("This is an issue of type: Task.").should("exist");
   });
-
-  const getIssueDetailsModal = () =>
-    cy.get('[data-testid="modal:issue-details"]');
 });
